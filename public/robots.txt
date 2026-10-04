@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow:
+
+Sitemap: https://juliusnarvasa.github.io/tokyo-xtreme-racer-save-editor/sitemap.xml

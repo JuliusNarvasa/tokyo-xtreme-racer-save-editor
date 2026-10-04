@@ -1,0 +1,41 @@
+:root {
+  --bg: #05060f;
+  --bg2: #0a0d1f;
+  --panel: #0c1126;
+  --line: #1c2440;
+  --text: #c9d4f2;
+  --dim: #7c86a8;
+  --cyan: #22e6ff;
+  --pink: #ff3ec8;
+  --amber: #ffb340;
+  --red: #ff5470;
+  --green: #3dffa2;
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+  font: 16px/150% var(--sans);
+  color: var(--text);
+  background: var(--bg);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1200px 300px at 20% -60px, rgba(34, 230, 255, 0.12), transparent),
+    radial-gradient(1000px 300px at 85% -40px, rgba(255, 62, 200, 0.12), transparent),
+    var(--bg);
+  min-height: 100vh;
+}
+
+#root { max-width: 1200px; margin: 0 auto; padding: 0 16px 48px; }
+
+h1, h2, h3 { color: #fff; letter-spacing: 0.02em; }
+h1 { font-size: 28px; margin: 0; }
+h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--cyan); margin: 0 0 12px; }
+h3 { font-size: 14px; margin: 16px 0 8px; color: var(--dim); text-transform: uppercase; letter-spacing: 0.1em; }
+
+.mono { font-family: var(--mono); }
+.neon-cyan { color: var(--cyan); }
+.neon-pink { color: var(--pink); }

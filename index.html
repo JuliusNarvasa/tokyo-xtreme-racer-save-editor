@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0e1430" />
+
+    <title>Tokyo Xtreme Racer Save Builder — Browser UserData_00.sav Editor (v1.6.0)</title>
+    <meta
+      name="description"
+      content="Free browser-only save editor for Tokyo Xtreme Racer (2025, UE5, Genki). Edit UserData_00.sav: player stats, garage, chassis swaps, engine swaps, 12-part tuning, perk tree. CRC-valid export. No upload, no install."
+    />
+    <meta
+      name="keywords"
+      content="Tokyo Xtreme Racer, TXR, save editor, UserData_00.sav, UE5, Genki, 2025, browser tool, garage editor, perk tree, engine swap, tune, CRC, v1.6.0"
+    />
+    <meta name="author" content="Julius Narvasa" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="generator" content="Vite + React 19 + TypeScript" />
+    <link rel="canonical" href="https://juliusnarvasa.github.io/tokyo-xtreme-racer-save-editor/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tokyo Xtreme Racer Save Builder" />
+    <meta property="og:title" content="Tokyo Xtreme Racer Save Builder — Browser UserData_00.sav Editor" />
+    <meta
+      property="og:description"
+      content="Edit your TXR (2025, UE5) UserData_00.sav save file entirely in your browser. Player stats, garage, engine swaps, tuning, perks. CRC-valid export."
+    />
+    <meta property="og:url" content="https://juliusnarvasa.github.io/tokyo-xtreme-racer-save-editor/" />
+    <meta property="og:image" content="https://juliusnarvasa.github.io/tokyo-xtreme-racer-save-editor/og-image.png" />
+    <meta property="og:image:alt" content="Tokyo Xtreme Racer Save Builder — browser save editor" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tokyo Xtreme Racer Save Builder" />
+    <meta
+      name="twitter:description"
+      content="Browser-only TXR save editor. Player stats, garage, engine swaps, tuning, perks, CRC-valid export."
+    />
+    <meta name="twitter:image" content="https://juliusnarvasa.github.io/tokyo-xtreme-racer-save-editor/og-image.png" />
+
+    <!-- Preconnect to the hotlinked thumbnail host so the picker grid renders fast -->
+    <link rel="preconnect" href="https://ddm999.github.io" crossorigin />
+    <link rel="dns-prefetch" href="https://ddm999.github.io" />
+
+    <!-- JSON-LD: SoftwareApplication (Google rich results) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Tokyo Xtreme Racer Save Builder",
+        "alternateName": "TXR Save Builder",
+        "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "Save Game Editor",
+        "operatingSystem": "Any (browser-based)",
+        "browserRequirements": "Requires JavaScript. Modern Chromium, Firefox, or Safari.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Free browser-only save editor for Tokyo Xtreme Racer (2025, UE5, Genki). Edit UserData_00.sav player stats, garage (add / remove / duplicate), per-car chassis and engine swaps, mileage, 12 tune kinds, and the perk tree. Validates against cheat limits and re-exports a CRC-correct save.",
+        "url": "https://juliusnarvasa.github.io/tokyo-xtreme-racer-save-editor/",
+        "downloadUrl": "https://github.com/JuliusNarvasa/tokyo-xtreme-racer-save-editor",
+        "softwareVersion": "1.6.0",
+        "author": {
+          "@type": "Person",
+          "name": "Julius Narvasa",
+          "url": "https://github.com/JuliusNarvasa"
+        },
+        "license": "https://github.com/JuliusNarvasa/tokyo-xtreme-racer-save-editor/blob/main/LICENSE",
+        "featureList": [
+          "Upload-and-edit mode (loads UserData_00.sav)",
+          "Build-from-template mode (1 stock ZC33S)",
+          "Player stats: CP, BP, PP, day, garage cap",
+          "Garage: add, remove, duplicate cars",
+          "Chassis swap (82 dealer / 3 demokit / 77 buyable customs)",
+          "Engine swap (6 swaps incl. 2JZ, RB26DETT, VR38DETT)",
+          "Per-car mileage",
+          "12 tune kinds (Power, Intake, Exhaust, Transmission, Clutch, Suspension, Brake, Body, FrontTire, RearTire, LSD, Nitro)",
+          "Perk tree: force-acquire all perks toggle",
+          "Strict-legit validation with cheat warnings",
+          "CRC32-IEEE correct save export"
+        ],
+        "keywords": "Tokyo Xtreme Racer, TXR, save editor, UserData_00.sav, UE5, Genki, v1.6.0"
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <article
+        style="
+          max-width: 780px;
+          margin: 40px auto;
+          font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+          color: #e8eaf6;
+          background: #0e1430;
+          padding: 32px;
+          border-radius: 12px;
+          line-height: 1.55;
+        "
+      >
+        <h1>Tokyo Xtreme Racer Save Builder</h1>
+        <p>
+          This is a <strong>browser-only</strong> editor for
+          <strong>Tokyo Xtreme Racer</strong> (2025, UE5, Genki)
+          <code>UserData_00.sav</code> save files. It needs JavaScript to run.
+        </p>
+        <h2>Features</h2>
+        <ul>
+          <li>Upload your <code>UserData_00.sav</code> and edit player stats (CP, BP, PP, day), garage, engine swaps, mileage, and 12-part tuning.</li>
+          <li>Build a save from a template (1 stock ZC33S) if you don't have one yet.</li>
+          <li>Force-acquire all perks (CP / BP / garage extension / shop unlocks) with one toggle.</li>
+          <li>Strict validation against legit caps, with a CRC-correct export.</li>
+        </ul>
+        <p>
+          Enable JavaScript to use the tool. Source &amp; issues:
+          <a href="https://github.com/JuliusNarvasa/tokyo-xtreme-racer-save-editor"
+            >github.com/JuliusNarvasa/tokyo-xtreme-racer-save-editor</a
+          >.
+        </p>
+      </article>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
